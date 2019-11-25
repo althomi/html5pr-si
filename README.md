@@ -16,7 +16,7 @@ Hier kommt man auf die Website für die Template auswahl
 #### Organisator: Andulf Mester
 #### Gruppe:  
  - Juliane Speck
- - Larissa Eirich
+ - Larissa Eirich   
  - Alischa Thomas
  - Laurin Dörre
  
