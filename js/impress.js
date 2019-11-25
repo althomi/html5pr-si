@@ -518,7 +518,7 @@
             if ( el === activeStep ) {
                 windowScale = computeWindowScale( config );
             }
-
+            // Test
             var targetScale = target.scale * windowScale;
 
             // Trigger leave of currently active element (if it's not the same step again)
