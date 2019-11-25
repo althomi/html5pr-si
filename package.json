@@ -1,11 +1,11 @@
 {
-  "name": "allalaju.js",
-  "version": "0.0.1",
+  "name": "impress.js",
+  "version": "1.0.0",
   "description": "It's a presentation framework based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.",
-  "main": "../../../../Downloads/impress.js-master/js/impress.js",
+  "main": "js/impress.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/althomi/html5pr-si.git"
+    "url": "https://github.com/impress/impress.js.git"
   },
   "keywords": [
     "presentation",
@@ -16,15 +16,15 @@
     "transforms",
     "browser"
   ],
-  "author": "DHBW",
+  "author": "Bartek Szopka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/althomi/html5pr-si/issues"
+    "url": "https://github.com/impress/impress.js/issues"
   },
   "scripts": {
-    "build": "node ../../../../Downloads/impress.js-master/build.js",
-    "lint": "jshint ../../../../Downloads/impress.js-master/src test/*.js && jscs src test/*.js",
-    "new-lint": "eslint ../../../../Downloads/impress.js-master/src test",
+    "build": "node build.js",
+    "lint": "jshint src test/*.js && jscs src test/*.js",
+    "new-lint": "eslint src test",
     "test": "karma start --log-level debug --single-run=true"
   },
   "devDependencies": {
