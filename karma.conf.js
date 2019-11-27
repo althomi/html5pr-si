@@ -8,7 +8,6 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['qunit'],
@@ -35,7 +34,7 @@ module.exports = function(config) {
     "/js/": "/base/js/",
     "/node_modules/": "/base/node_modules/"
   },
-    
+
     client: {
       clearContext: false,
       qunit: {
