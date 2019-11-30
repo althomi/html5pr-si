@@ -271,10 +271,12 @@ a:focus {
     -ms-transform:     translateZ(50px);
     -o-transform:      translateZ(50px);
     transform:         translateZ(50px);
+
 }
 
+/* Überschrift von Folie*/ 
 .blank h1 {
-    font-size: 100px;
+    font-size: 80px;
 }
 
 #title .footnote {
