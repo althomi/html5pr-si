@@ -15,21 +15,9 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic"
           rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <!--
+    
 
-        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
-        presentation to work.
 
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-
-    -->
     <link href="css/impress.css" rel="stylesheet"/>
 
     <link rel="shortcut icon" href="favicon.png"/>
@@ -49,37 +37,142 @@
 
 <div id="impress">
 
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Onlinemedien Design</q>
-    </div>
+   <!--
+    Folie Reihe 1
+-->
+<section class="step slide" data-x="-1000" data-y="-1500">
+  <header class="blank">
+    <h1>Überschrift</h1>
+  </header>
+  <main>
+    <h2>Online Medien Design</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
 
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Lineare <strong>Standard</strong> Version</q>
-    </div>
+ <!--
+    Folie mit Bild
+-->
+<section class="step slide" data-x="0" data-y="-1500">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+    <img src="flatiron.jpg" class="vollbild" alt="flatiron Gebäude">
+  </main> 
+</section>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>DHBW</q>
-    </div>
+<section class="step slide" data-x="1000" data-y="-1500">
+  <header>
+  </header>
+  <main>
+    <h2>DHBW</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
 
-    <div id="title" class="step" data-x="500" data-y="-1500" data-scale="4">
+ <!--
+    mehrteilige Folien, für zum Beispiel ein Thema
+-->
+<section class="step slide multi" data-x="2000" data-y="-1500">
+  <header>
+  </header>
+  <main>
+    <h2>Mulit-Folie</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
+
+<section class="step slide multi" data-x="2000" data-y="-1500">
+  <header>
+  </header>
+  <main>
+    <h2>Jetzt ist es Multi</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
+
+<section class="step slide" data-x="3000" data-y="-1500">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
+
+<section class="step slide" data-x="4000" data-y="-1500">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
+
+<section class="step slide" data-x="4000" data-y="-750">
+  <header>
+  </header>
+  <main>
+    <h2>Wandereffekt</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
+
+<!-- ende 1. Reihe Folien-->
+
+
+
+<div id="title" class="step" data-x="500" data-y="-1500" data-scale="4">
         <span class="try">Überschrift 1</span>
         <h1>Beispiel<sup>*</sup></h1>
         <span class="footnote"><sup>*</sup> kein Skill benötigt</span>
-    </div>
+ </div>
 
 
     <div id="impress">
 
-    <div id="bored1" class="step slide" data-x="-1000" data-y="0">
-        <q>Onlinemedien Design 2</q>
-    </div>
+<!-- Folien Reihe 2-->
+<section class="step slide" data-x="-1000" data-y="0">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p>Der Quelltext sieht im Prinzip so aus</p>
+  </main>
+</section>
 
-    <div class="step slide" data-x="0" data-y="0">
-        <q>Lineare <strong>Standard</strong> Version</q>
-    </div>
+<section class="step slide" data-x="0" data-y="0">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
+  </main>
+</section>
 
-    <div class="step slide" data-x="1000" data-y="0">
-        <q>DHBW Mosbach</q>
+<section class="step slide" data-x="1000" data-y="0">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p><strong>DHBW</strong> Mosbach</p>
+  </main>
+</section>
+
+<section class="step slide" data-x="1000" data-y="750">
+  <header>
+  </header>
+  <main>
+    <h2>Der Quelltext</h2>
+    <p><strong>DHBW</strong> Mosbach</p>
+  </main>
+</section>
+
+    <!--Ende Foie Reihe 2-->
+
+
     </div>
      <div id="title" class="step" data-x="500" data-y="-500" data-scale="4">
         <span class="try">Überschrift 2</span>
