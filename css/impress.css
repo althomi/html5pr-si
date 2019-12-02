@@ -2,16 +2,16 @@
 
     /* Online Medien Grün */
     /* lighter */
-    /* --main-bg-color: rgb(103, 157, 44);
+    --main-bg-color: rgb(103, 157, 44);
     /* darker */
-    /* --accent-bg-color: rgb(118, 178, 56);
+    --accent-bg-color: rgb(118, 178, 56);
 
     /* DHBW Rot */
     /* lighter */
-     --main-bg-color: rgb(226,0,26);
+    /* --main-bg-color: rgb(226,0,26);
     /* darker */
-     --accent-bg-color: rgb(199, 2, 25);
-
+    /* --accent-bg-color: rgb(199, 2, 25);
+*/
 }
 /***********************************************************************
 *                                                                      *
@@ -55,7 +55,7 @@ footer, header, hgroup, main, menu, nav, section {
 }
 
 /* Einbindung von Webfonts */
-
+/*
 @font-face {
     font-family:'Open Sans';
     font-weight:normal;
@@ -112,7 +112,7 @@ footer, header, hgroup, main, menu, nav, section {
     font-style:italic;
     src:url(../fonts/PT_Serif-Web-BoldItalic.ttf);
 }
-
+*/
 /* Allgemeine Angaben */
 
 body {
@@ -120,12 +120,12 @@ body {
     min-height: 740px;
 
     background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(var(--main-bg-color)), to(var(--accent-bg-color)));
+    background: -webkit-radial-gradient(var(--main-bg-color), var(--accent-bg-color));
+    background:    -moz-radial-gradient(var(--main-bg-color), var(--accent-bg-color));
+    background:     -ms-radial-gradient(var(--main-bg-color), var(--accent-bg-color));
+    background:      -o-radial-gradient(var(--main-bg-color), var(--accent-bg-color));
+    background:         radial-gradient(var(--main-bg-color), var(--accent-bg-color));
     line-height: 1;
 }
 
@@ -155,7 +155,7 @@ i,em {
 /* Kopfbereich */
 
 header {
-    background:url(../images/logo.png) no-repeat left top;
+    /*background:url(../images/logo.png) no-repeat left top;*/
     height:100px;
     opacity:0.75;
 }
@@ -175,7 +175,7 @@ main:before {
     content: ".";
     display: block;
     height:1px;
-    border-bottom:2px solid rgba(182, 200, 40, 1.0);
+    border-bottom:2px solid var(--main-bg-color);
     box-shadow:0 2px 6px rgba(0, 0, 0, .1);
     margin:0 -60px;
     font-size:0.01em;
@@ -290,9 +290,6 @@ a:focus {
     width: 780px;
     padding: 10px 10px 0;
     margin: 20px auto;
-
-    border: 1px solid #E4C652;
-    border-radius: 10px;
     background: #EEDC94;
 }
 
@@ -360,7 +357,6 @@ a:focus {
     overflow:hidden;
 
     background-color: white;
-    border: 2px solid rgba(182, 200, 40, 1.0);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
