@@ -13,6 +13,16 @@
      --accent-bg-color: rgb(199, 2, 25);
 
 }
+/***********************************************************************
+*                                                                      *
+* impress.css                                                          *
+*                                                                      *
+* style sheet fuer Praesentationen, die mit impress.js erstellt werden *
+* original unter http://bartaz.github.io/impress.js                    *
+* fuer ub bielefeld angepasst von sebastian wolf                       *
+* version 1.01, 20.06.2013                                             *
+*                                                                      *
+***********************************************************************/
 
 /* Reset der Standard-Stile neu */
 
@@ -43,15 +53,86 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
     display: block;
 }
+
+/* Einbindung von Webfonts */
+
+@font-face {
+    font-family:'Open Sans';
+    font-weight:normal;
+    font-style:normal;
+    src:url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family:'Open Sans';
+    font-weight:normal;
+    font-style:italic;
+    src:url(../fonts/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family:'Open Sans';
+    font-weight:bold;
+    font-style:normal;
+    src:url(../fonts/OpenSans-Semibold.ttf);
+}
+
+@font-face {
+    font-family:'Open Sans';
+    font-weight:bold;
+    font-style:italic;
+    src:url(../fonts/OpenSans-SemiboldItalic.ttf);
+}
+
+@font-face {
+    font-family:'PT Serif';
+    font-weight:normal;
+    font-style:normal;
+    src:url(../fonts/PT_Serif-Web-Regular.ttf);
+}
+
+
+@font-face {
+    font-family:'PT Serif';
+    font-weight:normal;
+    font-style:italic;
+    src:url(../fonts/PT_Serif-Web-Italic.ttf);
+}
+
+@font-face {
+    font-family:'PT Serif';
+    font-weight:bold;
+    font-style:normal;
+    src:url(../fonts/PT_Serif-Web-Bold.ttf);
+}
+
+@font-face {
+    font-family:'PT Serif';
+    font-weight:bold;
+    font-style:italic;
+    src:url(../fonts/PT_Serif-Web-BoldItalic.ttf);
+}
+
+/* Allgemeine Angaben */
+
 body {
+    font-family:'Open Sans', Arial, sans-serif;
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
@@ -64,25 +145,24 @@ table {
 }
 
 b,strong {
-  font-weight:bold;
+    font-weight:bold;
 }
 
 i,em {
-  font-style:italic;
+    font-style:italic;
 }
 
 /* Kopfbereich */
 
-section header {
-   /* background:url(../images/logo.png) no-repeat left top; */
-
+header {
+    background:url(../images/logo.png) no-repeat left top;
     height:100px;
     opacity:0.75;
 }
 
 /* Maximalgroesse von zus. Grafiken im header-Bereich nicht groesser als die Hintergrundgrafik */
 
-section header img {
+header img {
     width:auto;
     max-height:74px;
     float:right;
@@ -103,19 +183,19 @@ main:before {
 
 /* Fussbereich immer am Ende einer Folie positionieren */
 
-section footer {
-  position:absolute;
-  bottom:20px;
-  left:50px;
-  z-index:9999;
-  font-size:18px;
-  line-height:1.5;
+footer {
+    position:absolute;
+    bottom:20px;
+    left:50px;
+    z-index:9999;
+    font-size:18px;
+    line-height:1.5;
 }
 
 /* Links */
 
 a {
-    color: inherit;
+    color: #309;
     text-decoration: none;
     padding: 0 0.1em;
     background: rgba(255,255,255,0.5);
@@ -135,28 +215,6 @@ a:focus {
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
-/*
-a[href$=".pdf"] {
-  background: url('../images/pdf.gif') no-repeat 0 0;
-  padding:2px 0 2px 20px;
-}
-
-a[href$=".zip"] {
-  background: url('../images/download.png') no-repeat 0 0;
-  padding:2px 0 2px 20px;
-}
-
-body>header a[href^='#start'] {
-  background:url(../images/home.png) no-repeat 0 0;
-  padding:2px 0 2px 20px;
-}
-
-body>footer a[href^="http://"] {
-  background:url(../images/ub.png) no-repeat 0 0;
-  padding:2px 0 2px 20px;
-}
-*/
-
 /* Bedienungshinweis */
 
 .hint {
@@ -165,7 +223,7 @@ body>footer a[href^="http://"] {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 2.75em;
+    bottom: 4.5em;
 
     background: rgba(0,0,0,0.5);
     color: #EEE;
@@ -242,15 +300,13 @@ body>footer a[href^="http://"] {
     margin-bottom: 10px;
 }
 
+/* Hinweistexte ausblenden, fuer Browser die HTML5-faehig sind */
+
 .impress-supported .fallback-message {
     display: none;
 }
 
-/*
-    Now let's style the presentation steps.
-
-    We start with basics to make sure it displays correctly in everywhere ...
-*/
+/* Schritt */
 
 .step {
     position: relative;
@@ -267,6 +323,7 @@ body>footer a[href^="http://"] {
     font-size: 48px;
     line-height: 1.5;
 }
+
 
 .impress-enabled .step {
     margin: 0;
@@ -287,11 +344,8 @@ body>footer a[href^="http://"] {
     opacity: 1;
 }
 
-/*
-    These 'slide' step styles were heavily inspired by HTML5 Slides:
-    http://html5slides.googlecode.com/svn/trunk/styles.css
 
-    ;)
+/* Bei mehrteiligen Folien, nicht-aktive Folien komplett ausblenden */
 
 .impress-enabled .multi { opacity: 0.01; }
 
@@ -326,12 +380,12 @@ section.blank {
 }
 
 section.blank header, section.blank main:before {
-  display:none;
+    display:none;
 }
 
 /* 'blanker' Header ohne Logo */
 
-section header.blank {
+header.blank {
     background:#fff;
 }
 
@@ -394,26 +448,10 @@ section header.blank {
     transition-delay:         0.85s;
 }
 
-.animation.present .scaling18 {
-    -webkit-transform: scale(1.8);
-    -moz-transform:    scale(1.8);
-    -ms-transform:     scale(1.8);
-    -o-transform:      scale(1.8);
-    transform:         scale(1.8);
-
-    /* zusaetzliche Verzoegerung, damit der Effekt erst nach 'positioning' und 'rotating' ablaueft */
-
-    -webkit-transition-delay: 0.85s;
-    -moz-transition-delay:    0.85s;
-    -ms-transition-delay:     0.85s;
-    -o-transition-delay:      0.85s;
-    transition-delay:         0.85s;
-}
-
 /* Die Uebersichts-Folie ausblenden fuer nicht HTML5-faehige Browser */
 
 #overview {
-  display: none;
+    display: none;
 }
 
 /* Auf der Uebersichtsfolie alle Folien anzeigen */
@@ -453,50 +491,27 @@ section.blank h1 {
     margin:0;
 }
 
-section header h1 {
-  margin:0;
-  color:#666;
+header h1 {
+    margin:0;
+    color:#666;
 }
 
-#start h1 {
+hgroup h1 {
     font-size:3em;
-    line-height:1.05;
+    line-height:0.9;
     margin:0.3em 0;
 }
 
-#start h2 {
+hgroup h2 {
     font-size:1em;
     line-height:1.2;
 }
 
 /* Grafiken */
 
-img.rechts {
-    float:right;
-    margin:.5em .5em 0 .5em;
-}
-
-img.links {
-    float:left;
-    margin:.5em .5em 0 0;
-}
-
-
-img.klein {
-    width:80px;
-    height:auto;
-    vertical-align:middle;
-}
-
 img.vollbild {
-  width:770px;
-  height:auto;
-}
-
-/* Absaetze */
-
-p {
-  margin:0.5em 0;
+    width:770px;
+    height:auto;
 }
 
 /* Listen */
@@ -510,12 +525,12 @@ ul li {
 }
 
 ol li {
-    margin:0 0 0 45px;
-    padding:0 0 0.7em 0;
+    margin:20px 0 0 45px;
+    padding:0 0 0.25em 0;
 }
 
 ul.kompakt, ol.kompakt {
-  margin-top:-10px;
+    margin-top:-10px;
 }
 
 ul.kompakt li {
@@ -523,7 +538,12 @@ ul.kompakt li {
 }
 
 ol.kompakt li {
-    padding-bottom:0.3em;
+    padding-bottom:0;
+    line-height:1;
+}
+
+p {
+    margin:0.5em 0;
 }
 
 /* Vorformattierter Text, Code */
@@ -566,7 +586,11 @@ table thead {
 }
 
 table tfoot {
-  font-style:italic;
+    font-style:italic;
+}
+
+table.erstespalte thead {
+    background-color:#fff;
 }
 
 table th, table td {
@@ -598,190 +622,155 @@ table.zebraspalten th:nth-child(odd) { /* ungerade tabellenspalten auch in der u
     background-color:#fff;
 }
 
-table.erstespalte thead {
-    background-color:#fff;
-}
-
 table.erstespalte th:first-child, table.erstespalte td:first-child { /* erste spalte farbig */
     background-color:#eee;
-}
-
-table.letztespalte thead { /* gerade tabellenzeilen (2,4,6 ...) */
-    background-color:#fff;
-}
-
-table.letztespalte td:last-child, table.letztespalte th:last-child  { /* gerade tabellenzeilen (2,4,6 ...) */
-    background-color:#eff3d7;
 }
 
 
 /* Formulare */
 
 form {
-  margin:1em 0;
+    margin:1em 0;
 }
 
 form div:after {
-  clear:              both;
-  content:            ".";
-  display:            block;
-  height:             10px;
-  visibility:         hidden;
+    clear:              both;
+    content:            ".";
+    display:            block;
+    height:             10px;
+    visibility:         hidden;
 
 }
 
 label, input {
-  float:left;
+    float:left;
 }
 
 label {
-width:4em;
-}
-
-input {
-  border:1px solid #ccc;
-  font-size:20px;
-  padding:.5em !important;
+    width:3.5em;
 }
 
 input, .check :invalid, .check :valid {
-  width:15em;
-  margin-left:1em;
+    width:15em;
+    margin-left:1em;
 }
 
 form:after {
-  clear:              both;
-  content:            ".";
-  display:            block;
-  height:             0;
-  visibility:         hidden;
+    clear:              both;
+    content:            ".";
+    display:            block;
+    height:             0;
+    visibility:         hidden;
 }
 
 [required] {
-  border: 2px solid #333;
-  box-shadow: 0 0 3px rgba(0, 0, 255, .5);
+    border: 2px solid #333;
+    box-shadow: 0 0 3px rgba(0, 0, 255, .5);
 }
 
 .check :invalid {
-  border: 5px solid #f00;
-  box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+    border: 5px solid #f00;
+    box-shadow: 0 0 5px rgba(255, 0, 0, .8);
 }
 
 .check :valid {
-  border: 2px solid #0f0;
-  box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+    border: 2px solid #0f0;
+    box-shadow: 0 0 5px rgba(255, 0, 0, .8);
 }
 
 input[type=text] {
-  background: #eee;
+    background: #eee;
 }
 
 button, .button {
-border:2px solid #b6c828;
-border-radius:10px;
-padding:10px;
-background-color:#eff3d7;
+    border:2px solid #b6c828;
+    border-radius:10px;
+    padding:10px;
+    background-color:#eff3d7;
 }
 
 button {
-  margin:2em 0;
+    margin:2em 0;
 }
 
 /* Tabs */
 
 .tab {
-border:1px solid #b6c828;
-background-color:#eee;
--webkit-border-top-left-radius: 20px;
--webkit-border-top-right-radius: 20px;
--moz-border-radius-topleft: 20px;
--moz-border-radius-topright: 20px;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
-border-bottom:0;
-padding:0 15px;
+    border:1px solid #b6c828;
+    background-color:#eee;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom:0;
+    padding:0 15px;
 }
 
 /* Texteffekte */
 
-.sehrklein {
-  font-size:60%;
-}
-
 .klein {
-  font-size:75%;
+    font-size:75%;
 }
 
 .gross {
-  font-size:150%;
-}
-
-.sehrgross {
-  font-size:200%;
+    font-size:200%;
 }
 
 .blass {
-  opacity:0.3;
+    opacity:0.3;
 }
 
-section header .blass { /* Da der header schon auf 0.75 abgeblasst ist, muss bei blassen images im header die opacity etwas weniger stark sein */
-  opacity:0.4;
-}
-
-.sehrschmal {
-  letter-spacing:-0.11em;
+header .blass { /* Da der header schon auf 0.75 abgeblasst ist, muss bei blassen images im header die opacity etwas weniger stark sein */
+    opacity:0.4;
 }
 
 .schmal {
-  letter-spacing:-0.07em;
+    letter-spacing:-0.07em;
 }
 
 .breit {
-  letter-spacing:0.2em;
+    letter-spacing:0.2em;
 }
 
-.sehrfbreit {
-  letter-spacing:0.5em;
-  white-space:nowrap;
+.extrabreit {
+    letter-spacing:0.5em;
+    white-space:nowrap;
 }
 
 /* Mehrspaltiger Text */
 
 .mehrspaltig {
--webkit-column-count: 2;
--webkit-column-rule: 1px solid #bbb;
--webkit-column-gap: 2em;
--moz-column-count: 2;
--moz-column-rule: 1px solid #bbb;
--moz-column-gap: 2em;
--column-count: 2;
--column-rule: 1px solid #bbb;
--column-gap: 2em;
+    -webkit-column-count: 2;
+    -webkit-column-rule: 1px solid #bbb;
+    -webkit-column-gap: 2em;
+    -moz-column-count: 2;
+    -moz-column-rule: 1px solid #bbb;
+    -moz-column-gap: 2em;
+    -column-count: 2;
+    -column-rule: 1px solid #bbb;
+    -column-gap: 2em;
 }
 
 /* Fest verankerter Text ausserhalb der Praesentation */
 
-body>header, body>footer {
-  position:fixed;
-  left:1em;
-  pointer-events: auto;
+#kopf, #fuss {
+    position:fixed;
+    left:1em;
+    pointer-events: auto;
 }
 
-body>header a, body>footer a {
-  font-size:82%;
-  background-color:inherit;
-  font-family:Arial,Helvetica,sans-serif;
+#kopf a, #fuss a {
+    font-size:82%;
+    background-color:inherit;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-body>header {
-  top:1em;
+#kopf {
+    top:1em;
 }
 
-body>footer {
-  bottom:1em;
-}
-
-body>header img, body>footer img {
-  vertical-align:top;
-  margin-right:5px;
+#fuss {
+    bottom:1em;
 }
