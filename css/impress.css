@@ -5,6 +5,8 @@
     --main-bg-color: rgb(103, 157, 44);
     /* darker */
     --accent-bg-color: rgb(118, 178, 56);
+    --headline-color: #333;
+    --text-color: black;
 
     /* DHBW Rot */
     /* lighter */
@@ -16,7 +18,8 @@
 /***********************************************************************
 *                                                                      *
 * impress.css                                                          *
-*                                                                      *
+*
+*
 * style sheet fuer Praesentationen, die mit impress.js erstellt werden *
 * original unter http://bartaz.github.io/impress.js                    *
 * fuer ub bielefeld angepasst von sebastian wolf                       *
@@ -181,15 +184,26 @@ main:before {
     font-size:0.01em;
 }
 
+.clear main:before {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+
+.page-nr {
+    color: var(--text-color);
+}
 /* Fussbereich immer am Ende einer Folie positionieren */
 
 footer {
-    position:absolute;
+    position:fixed;
+    width: calc(100% - 110px);
     bottom:20px;
     left:50px;
     z-index:9999;
     font-size:18px;
     line-height:1.5;
+    text-align: right;
 }
 
 /* Links */
@@ -360,7 +374,7 @@ a:focus {
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    color: rgb(102, 102, 102);
+    color: var(--text-color);
     text-shadow: 4px 4px 2px rgba(0, 0, 0, .1);
 
     font-size:32px;
@@ -489,7 +503,7 @@ section.blank h1 {
 
 header h1 {
     margin:0;
-    color:#666;
+    color: var(--headline-color);
 }
 
 hgroup h1 {

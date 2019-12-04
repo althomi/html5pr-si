@@ -313,7 +313,13 @@
                 };
 
             if ( !el.id ) {
-                el.id = "step-" + (idx + 1);
+                el.id = (idx + 1);
+            }
+            console.log("ID: " + idx);
+            try {
+                document.getElementsByClassName('page-nr')[idx].innerHTML = el.id;
+            } catch (e) {
+
             }
 
             stepsData["impress-" + el.id] = step;
@@ -444,7 +450,6 @@
                 body.classList.remove("impress-on-" + activeStep.id);
             }
             el.classList.add("active");
-
             body.classList.add("impress-on-" + el.id);
 
             // compute target state of the canvas based on given step
@@ -523,11 +528,9 @@
                     currentState.translate.y === target.translate.y && currentState.translate.z === target.translate.z) ) {
                 delay = 0;
             }
-
             // store current state
             currentState = target;
             activeStep = el;
-
             // And here is where we trigger `impress:stepenter` event.
             // We simply set up a timeout to fire it taking transition duration (and possible delay) into account.
             //
@@ -766,7 +769,6 @@
                 var x = event.touches[0].clientX,
                     width = window.innerWidth * 0.3,
                     result = null;
-
                 if ( x < width ) {
                     result = api.prev();
                 } else if ( x > window.innerWidth - width ) {
