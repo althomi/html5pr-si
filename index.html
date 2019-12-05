@@ -63,7 +63,7 @@
     <footer><p class="page-nr"></p></footer>
 </section>
 
- <!-- mehrteilige Folien, für zum Beispiel ein Thema -->
+ <!-- mehrteilige Folien: ohne Bewegung bleibt, auf einer Stelle. -->
 <section class="step slide multi" data-x="500" data-y="-2500">
   <header>
       <h2>Multi-Folie</h2>
@@ -90,6 +90,8 @@
     <footer><p class="page-nr"></p></footer>
 </section>
 
+<!-- Folie ohne eine "Folienfläche" Diese art von Folien haben keinen Header. -->
+
 <section class="step blank" data-x="1500" data-y="-2500">
   <header>
       <h2>Der Quelltext</h2>
@@ -115,7 +117,7 @@
       <h2>Wandereffekt</h2>
   </header>
   <main>
-    <p>Lineare <strong>Standard</strong> Version</p>
+    <p>Die Folie bewegt sich nach <strong>UNTEN</strong> , dieser Effekt wird auch Wanderefekt genannt.</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
@@ -135,22 +137,48 @@
 </section>
 
 <section class="step blank" data-x="-1500" data-y="-750">
+  <header>
+     <h2>Der Quelltext</h2>
+  </header>
   <main>
-    <h2>Der Quelltext</h2>
     <p>Lineare <strong>Standard</strong> Version</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
 <section class="step blank" data-x="-500" data-y="-750">
+  <header>
+     <h2>Der Quelltext</h2>
+  </header>
   <main>
-    <h2>Der Quelltext</h2>
     <p><strong>DHBW</strong> Mosbach</p>
+  </main>
+    <footer><p class="page-nr"></p></footer>
+
+    <section class="step slide" data-x="500" data-y="-750">
+  <header>
+      <h2>Der Quelltext</h2>
+  </header>
+  <main>
+    <p>Der Quelltext sieht im Prinzip so aus</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
- <section id="overview" class="step" data-x="500" data-y="-1500" data-rotate-x="0" data-rotate-y="0" data-scale="5"></section>
+<section class="step slide" data-x="1500" data-y="-750">
+  <header>
+      <h2>Der Quelltext</h2>
+  </header>
+  <main>
+    <p>Der Quelltext sieht im Prinzip so aus</p>
+  </main>
+    <footer><p class="page-nr"></p></footer>
+</section>
+
+
+
+<!-- Mit Overview sieht man alle Folien, durch eine zoomout effekt bekommt man den Gesamtüberblick -->
+<section id="overview" class="step" data-x="500" data-y="-1500" data-rotate-x="0" data-rotate-y="0" data-scale="5"></section>
 </div>
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
