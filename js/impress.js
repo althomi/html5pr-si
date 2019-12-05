@@ -313,9 +313,14 @@
                 };
 
             if ( !el.id ) {
-                el.id = "step-" + (idx + 1);
+                el.id = (idx + 1);
             }
+            try {
+                // Seitenanzahl
+                document.getElementsByClassName('page-nr')[idx].innerHTML = el.id;
+            } catch (e) {
 
+            }
             stepsData["impress-" + el.id] = step;
 
             css(el, {

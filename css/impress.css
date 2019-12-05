@@ -5,7 +5,7 @@
     --main-bg-color: rgb(103, 157, 44);
     /* darker */
     --accent-bg-color: rgb(118, 178, 56);
-
+    --text-color: rgb(110,110,110);
     /* DHBW Rot */
     /* lighter */
     /* --main-bg-color: rgb(226,0,26);
@@ -183,13 +183,20 @@ main:before {
 
 /* Fussbereich immer am Ende einer Folie positionieren */
 
+.page-nr {
+    color: var(--text-color);
+}
+/* Fussbereich immer am Ende einer Folie positionieren */
+
 footer {
-    position:absolute;
+    position:fixed;
+    width: calc(100% - 110px);
     bottom:20px;
     left:50px;
     z-index:9999;
     font-size:18px;
     line-height:1.5;
+    text-align: right;
 }
 
 /* Links */
