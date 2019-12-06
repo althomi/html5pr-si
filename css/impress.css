@@ -524,6 +524,11 @@ img.vollbild {
     height:auto;
 }
 
+img.klein {
+    width: 500px;
+    height:auto;
+}
+
 /* Listen */
 
 ul li {
