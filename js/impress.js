@@ -447,9 +447,7 @@
             try {
                 // Seitenanzahl
                 body.getElementsByClassName('page-nr')[step.count].innerHTML = el.id;
-                console.log("el.id: " + step.count);
             } catch (e) {
-                console.log("el.id: " + step.count);
             }
 
             // compute target state of the canvas based on given step
