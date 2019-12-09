@@ -309,17 +309,12 @@
                         z: toNumber(data.rotateZ || data.rotate)
                     },
                     scale: toNumber(data.scale, 1),
-                    el: el
-                };
+                    el: el,
+                    count: idx
 
+                };
             if ( !el.id ) {
                 el.id = (idx + 1);
-            }
-            try {
-                // Seitenanzahl
-                document.getElementsByClassName('page-nr')[idx].innerHTML = el.id;
-            } catch (e) {
-
             }
             stepsData["impress-" + el.id] = step;
 
@@ -336,7 +331,6 @@
         // `init` API function that initializes (and runs) the presentation.
         var init = function () {
             if (initialized) { return; }
-
             // First we set up the viewport for mobile devices.
             // For some reason iPad goes nuts when it is not done properly.
             var meta = $("meta[name='viewport']") || document.createElement("meta");
@@ -425,7 +419,7 @@
 
         // `goto` API function that moves to step given with `el` parameter (by index, id or element),
         // with a transition `duration` optionally given as second parameter.
-        var goto = function ( el, duration ) {
+        var goto = function ( el, duration) {
 
             if ( !initialized || !(el = getStep(el)) ) {
                 // presentation not initialized or given element is not a step
@@ -449,8 +443,14 @@
                 body.classList.remove("impress-on-" + activeStep.id);
             }
             el.classList.add("active");
-
             body.classList.add("impress-on-" + el.id);
+            try {
+                // Seitenanzahl
+                body.getElementsByClassName('page-nr')[step.count].innerHTML = el.id;
+                console.log("el.id: " + step.count);
+            } catch (e) {
+                console.log("el.id: " + step.count);
+            }
 
             // compute target state of the canvas based on given step
             var target = {
