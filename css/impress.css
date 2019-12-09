@@ -6,6 +6,8 @@
     /* darker */
     --accent-bg-color: rgb(118, 178, 56);
     --text-color: rgb(110,110,110);
+    --link-color: rgb(0,0,0);
+    --font-family: 'Raleway', Arial , sans-serif;;
     /* DHBW Rot */
     /* lighter */
     /* --main-bg-color: rgb(226,0,26);
@@ -116,7 +118,7 @@ footer, header, hgroup, main, menu, nav, section {
 /* Allgemeine Angaben */
 
 body {
-    font-family:'Open Sans', Arial, sans-serif;
+    font-family: var(--font-family);
     min-height: 740px;
 
     background: rgb(215, 215, 215);
@@ -202,7 +204,7 @@ footer {
 /* Links */
 
 a {
-    color: #309;
+    color: var(--link-color);
     text-decoration: none;
     padding: 0 0.1em;
     background: rgba(255,255,255,0.5);
@@ -261,6 +263,20 @@ a:focus {
     display: block
 }
 
+/* Mehrspaltiger Text */
+
+.mehrspaltig {
+-webkit-column-count: 2; 
+-webkit-column-rule: 1px solid #bbb;
+-webkit-column-gap: 2em;
+-moz-column-count: 2;
+-moz-column-rule: 1px solid #bbb;
+-moz-column-gap: 2em;
+-column-count: 2; 
+-column-rule: 1px solid #bbb;
+-column-gap: 2em;
+}
+
 /* Die aktive Folie hat die Klasse impress-on-ID, der Hinweistext erscheint bei der Folie mit dem ID 'start', also der ersten Folie */
 
 .impress-on-start .hint {
@@ -290,7 +306,7 @@ a:focus {
 /* Hinweistexte fuer Browser, die nicht HTML5-faehig sind */
 
 .fallback-message {
-    font-family: sans-serif;
+    font-family: var(--font-family);
     line-height: 1.3;
 
     width: 780px;
@@ -378,7 +394,7 @@ a:focus {
 
 section.blank {
     padding:0;
-    font-family:'PT Serif', Georgia, serif;
+    font-family: var(--font-family);
 }
 
 section.blank header, section.blank main:before {
@@ -779,7 +795,7 @@ header .blass { /* Da der header schon auf 0.75 abgeblasst ist, muss bei blassen
 #kopf a, #fuss a {
     font-size:82%;
     background-color:inherit;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family: var(--font-family);
 }
 
 #kopf {
