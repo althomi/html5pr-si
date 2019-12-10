@@ -32,7 +32,7 @@
 
 <div id="impress">
 <!-- Folie Reihe 1 -->
-<section  class="step slide" data-x="-2500" data-y="-2500">
+<section id="Intro" class="step slide" data-x="-2500" data-y="-2500">
   <header class="blank">
     <h1>Überschrift</h1>
   </header>
@@ -42,31 +42,28 @@
     <footer><p class="page-nr"></p></footer>
 </section>
 
- <!-- Folie mit Bild im Vollbildmodus -->
+ <!-- Folie mit Bild -->
 <section class="step slide" data-x="-1500" data-y="-2500">
   <header>
-      <h2>Folie mit Bild im "Vollbild"</h2>
+      <h2>Der Quelltext</h2>
   </header>
   <main>
-    <p>Lineare <strong>Standard</strong> Version </p>
+    <p>Lineare <strong>Standard</strong> Version ohne Seitenanzahl</p>
     <img src="flatiron.jpg" class="vollbild" alt="flatiron Gebäude">
   </main>
-  <footer><p class="page-nr"></p></footer>
 </section>
 
- <!-- Folie mit Bild im kleinen Format-->
 <section class="step slide" data-x="-500" data-y="-2500">
   <header>
-      <h2>Bild im kleinen Format</h2>
+      <h2>DHBW</h2>
   </header>
   <main>
     <p>Lineare <strong>Standard</strong> Version</p>
-    <img src="flatiron.jpg" class="klein" alt="flatiron Gebäude">
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
- <!-- mehrteilige Folien: ohne Bewegung bleibt, auf einer Stelle. -->
+ <!-- mehrteilige Folien, für zum Beispiel ein Thema -->
 <section class="step slide multi" data-x="500" data-y="-2500">
   <header>
       <h2>Multi-Folie</h2>
@@ -93,110 +90,32 @@
     <footer><p class="page-nr"></p></footer>
 </section>
 
-<!-- Tabellen -->
-<section class="step slide multi" data-x="1500" data-y="-2500">
+<section class="step blank" data-x="1500" data-y="-2500">
   <header>
-      <h2>Tabellen</h2>
+      <h2>Der Quelltext</h2>
   </header>
   <main>
-  <table class="zebrastreifen">
-  <thead>
-  <tr>
-  <th>Spalte 1</th>
-  <th>Spalte 2</th>
-  <th>Spalte 3</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td>Text</td>
-  <td>Text</td>
-  <td>Text</td>
-  </tr>
-  <tr>
-  <td>Text</td>
-  <td>Text</td>
-  <td>Text</td>
-  </tr>
-  <tr>
-  <td>Text</td>
-  <td>Text</td>
-  <td>Text</td>
-  </tr>
-  </tbody>
-  </table>
+    <p>Lineare <strong>Standard</strong> Version</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
- <section class="step slide multi" data-x="1500" data-y="-2500">
-      <header>
-        <h2>Tabellen</h2>
-      </header>
-      <main>
-  <p>Tabellen lassen sich mit den Klassen <code>zebrastreifen</code>, <code>zebraspalten</code> und <code><em>erstespalte</em></code> gestalten.</p>
-  <pre><code>&lt;table class="erstespalte"&gt;</code></pre>
-  <table class="erstespalte">
-  <thead>
-  <tr>
-  <th>Spalte 1</th>
-  <th>Spalte 2</th>
-  <th>Spalte 3</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td>Text</td>
-  <td>Text</td>
-  <td>Text</td>
-  </tr>
-  <tr>
-  <td>Text</td>
-  <td>Text</td>
-  <td>Text</td>
-  </tr>
-  <tr>
-  <td>Text</td>
-  <td>Text</td>
-  <td>Text</td>
-  </tr>
-  </tbody>
-  </table>
-      </main>
-    </section>
-
-
-<!-- mehrspaltige Folien -->
 <section class="step slide" data-x="2500" data-y="-2500">
   <header>
-      <h2>Mehrspaltig</h2>
+      <h2>Der Quelltext</h2>
   </header>
   <main>
-   <p class="mehrspaltig"> mehrspaltigen Text. In der CSS-Datei legt man fest, wie viele Spalten es sein sollen. In der Voreinstellung sind es zwei.</p>
-   
-   
+    <p>Lineare <strong>Standard</strong> Version</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
 <section class="step slide" data-x="2500" data-y="-1750">
   <header>
-      <h2> Der Wandereffekt</h2>
+      <h2>Wandereffekt</h2>
   </header>
   <main>
-    <p>Die Folie bewegt sich nach <strong>UNTEN</strong> , dieser Effekt wird auch Wanderefekt genannt.Data-y +750 um nach unten zu wandern und -750 um nach oben zu wandern. </p>
-  </main>
-    <footer><p class="page-nr"></p></footer>
-</section>
-
-<!-- Folie ohne eine "Folienfläche" Diese art von Folien haben keinen Header. -->
-
-<section class="step blank" data-x="3500" data-y="-1750">
-  <header>
-      <h2>Folienlose Folie</h2>
-  </header>
-  <main>
-    <p>Dieser <strong>"step"</strong> hat keine "Folienhintergrund"!</p>
+    <p>Lineare <strong>Standard</strong> Version</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
@@ -204,59 +123,9 @@
 <!-- ende 1. Reihe Folien-->
 
 
-
 <!-- Folien Reihe 2-->
 <section class="step slide" data-x="-2500" data-y="-750">
   <header>
-      <h2>Listen</h2>
-  </header>
-  <main>
-  <div class="mehrspaltig">
-  <pre><code>&lt;ul class="kompakt"&gt;</code></pre>
-  <ul class="kompakt">
-    <li>Ich</li>
-    <li>bin</li>
-    <li>eine</li>
-    <li>kompakte</li>
-    <li>unnummerierte</li>
-    <li>Liste</li>
-  </ul>
-  <pre><code>&lt;ol class="kompakt"&gt;</code></pre>
-  <ol class="kompakt">
-    <li>Ich</li>
-    <li>bin</li>
-    <li>eine</li>
-    <li>kompakte</li>
-    <li>nummerierte</li>
-    <li>Liste</li>
-  </ol>
-  </div>
-  </main>
-    <footer><p class="page-nr"></p></footer>
-</section>
-
-<section class="step slide" data-x="-1500" data-y="-750">
-  <header>
-      <h2>DHBW Mosbach</h2>
-  </header>
-  <main>
-    <p>Die DHBW Mosbach hat viele nette Studenten :)</p>
-  </main>
-    <footer><p class="page-nr"></p></footer>
-</section>
-
-<section class="step slide" data-x="-500" data-y="-750">
-  <header>
-      <h2>Onlinemedien</h2>
-  </header>
-  <main>
-    <p>Die ON19 ist toll.</p>
-  </main>
-    <footer><p class="page-nr"></p></footer>
-</section>
-
-<section class="step slide" data-x="500" data-y="-750">
-  <header>
       <h2>Der Quelltext</h2>
   </header>
   <main>
@@ -265,37 +134,23 @@
     <footer><p class="page-nr"></p></footer>
 </section>
 
-<section class="step slide" data-x="1500" data-y="-750">
-  <header>
-      <h2>Der Quelltext</h2>
-  </header>
+<section class="step blank" data-x="-1500" data-y="-750">
   <main>
-    <p>Der Quelltext sieht im Prinzip so aus</p>
+    <h2>Der Quelltext</h2>
+    <p>Lineare <strong>Standard</strong> Version</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
-<section class="step slide" data-x="1500" data-y="0">
-  <header>
-      <h2>Der Quelltext</h2>
-  </header>
+<section class="step blank" data-x="-500" data-y="-750">
   <main>
-    <p>Der Quelltext sieht im Prinzip so aus</p>
+    <h2>Der Quelltext</h2>
+    <p><strong>DHBW</strong> Mosbach</p>
   </main>
     <footer><p class="page-nr"></p></footer>
 </section>
 
-<section class="step blank" data-x="3000" data-y="-50" data-rotate="90" data-scale="2.5">
-        <h1 class="breit">Danke&hellip;</h1>
-  <em>In die Präsentation bringt man Schwung mit: <code>data-rotate</code>. Hier kommt <code>blank</code> und <code>data-scale</code> zum Einsatz. Gerne als Überschrift oder auch als Zwischenüberschrift verwenden.</em>
-  </section>
-
-
-
-
-
-<!-- Mit Overview sieht man alle Folien, durch eine zoomout effekt bekommt man den Gesamtüberblick, immer anpassen, wenn neue Folien hinzugefügt werden!;) -->
-<section id="overview" class="step" data-x="500" data-y="-1000" data-rotate-x="0" data-rotate-y="0" data-scale="6"></section>
+ <section id="overview" class="step" data-x="500" data-y="-1500" data-rotate-x="0" data-rotate-y="0" data-scale="6"></section>
 </div>
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
