@@ -2,9 +2,9 @@
 
     /* Online Medien Grün */
     /* lighter */
-    --main-bg-color: rgb(103, 157, 44);
+    --main-bg-color: rgb(0, 0, 0);
     /* darker */
-    --accent-bg-color: rgb(118, 178, 56);
+    --accent-bg-color: rgb(0, 0, 0);
     --headline-color: #333;
     --text-color: black;
 
@@ -386,7 +386,7 @@ a:focus {
 
 section.blank {
     padding:0;
-    font-family:'PT Serif', Georgia, serif;
+    font-family:'Raleway', Arial, sans-serif;
 }
 
 section.blank header, section.blank main:before {
@@ -558,7 +558,7 @@ ol.kompakt li {
 }
 
 ul {
-    margin-top: 15px;
+    margin: 45px 0 0 0;
 }
 p {
     margin:0.5em 0;
@@ -782,7 +782,7 @@ header .blass { /* Da der header schon auf 0.75 abgeblasst ist, muss bei blassen
 #kopf a, #fuss a {
     font-size:82%;
     background-color:inherit;
-    font-family:Raleway,Helvetica,sans-serif;
+    font-family:Raleway,Arial,sans-serif;
 }
 
 #kopf {
