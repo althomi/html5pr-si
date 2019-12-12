@@ -318,7 +318,7 @@
             console.log("ID: " + idx);
             try {
                 // Seitenanzahl
-                document.getElementsByClassName('page-nr')[idx].innerHTML = el.id;
+                document.getElementsByClassName('page-nr')[idx].innerHTML = "" + idx + 1;
             } catch (e) {
 
             }
