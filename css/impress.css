@@ -529,6 +529,10 @@ img.klein {
     height:auto;
 }
 
+video.vollbild {
+    width:770px;
+    height:auto;
+}
 /* Listen */
 
 ul li {
