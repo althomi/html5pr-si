@@ -5,7 +5,7 @@ AUS RECHTLICHEN GRÜNDEN IST HIER KEIN SCREENCAST ;-)
   
 ## Templates
 Hier kommt man auf die Website für die Template auswahl
-[Zur Umfrage](https://html.laurindoerre.de)  
+[Zur Umfrage](http://html.laurindoerre.de)  
 
 ## Stakeholder  
 #### Organisator: Andulf Mester
