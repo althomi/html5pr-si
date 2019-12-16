@@ -1,16 +1,11 @@
-# allalaju.js
+# allalaju.js - HTML 5 Templates
   
-## Warum?  
-Einleitung
-Erklärung wie das mit der Umfrage funktioniert
-BILD
-  
-## Installation
-VIDEO
+## Warum
+AUS RECHTLICHEN GRÜNDEN IST HIER KEIN SCREENCAST ;-)
   
 ## Templates
 Hier kommt man auf die Website für die Template auswahl
-[Zur Umfrage](html.laurindoerre.de)  
+[Zur Umfrage](https://html.laurindoerre.de)  
 
 ## Stakeholder  
 #### Organisator: Andulf Mester
