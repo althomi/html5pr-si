@@ -10,7 +10,7 @@ VIDEO
   
 ## Templates
 Hier kommt man auf die Website für die Template auswahl
-[Zur Umfrage](commingsoon.de)  
+[Zur Umfrage](html.laurindoerre.de)  
 
 ## Stakeholder  
 #### Organisator: Andulf Mester
