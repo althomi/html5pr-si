@@ -4,7 +4,7 @@
 AUS RECHTLICHEN GRÜNDEN IST HIER KEIN SCREENCAST ;-)
   
 ## Templates
-Hier kommt man auf die Website für die Template auswahl
+Hier kommt man auf die Website für die Templateauswahl
 [Zur Umfrage](http://html.laurindoerre.de)  
 
 ## Stakeholder  
